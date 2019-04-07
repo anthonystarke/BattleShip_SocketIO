@@ -76,9 +76,31 @@
   !*** ./client/src/app.js ***!
   \***************************/
 /*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("const LoadingView = __webpack_require__(/*! ./views/loading_view.js */ \"./client/src/views/loading_view.js\");\nconst MasterView = __webpack_require__(/*! ./views/master_view.js */ \"./client/src/views/master_view.js\");\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  const masterDiv = document.querySelector('.gameWrapper');\n  const masterView = new MasterView(masterDiv);\n  masterView.bindEvents();\n\n  const loadingDiv = document.querySelector('.loadingMessage');\n  const loadingView = new LoadingView(loadingDiv);\n  loadingView.bindEvents();\n\n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
+
+/***/ }),
+
+/***/ "./client/src/views/loading_view.js":
+/*!******************************************!*\
+  !*** ./client/src/views/loading_view.js ***!
+  \******************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\ndocument.addEventListener('DOMContentLoaded', () => {\n  console.log(\"Jscript loaded\");\n\n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
+eval("const LoadingView = function(loadingDiv) {\n  this.loadingDiv = loadingDiv;\n}\n\nLoadingView.prototype.bindEvents = function () {\n  socket.on('game-ready',() => {\n    this.hideDiv();\n  })\n};\n\nLoadingView.prototype.hideDiv = function () {\n  this.loadingDiv.classList.add('hide');\n};\n\nmodule.exports = LoadingView;;\n\n\n//# sourceURL=webpack:///./client/src/views/loading_view.js?");
+
+/***/ }),
+
+/***/ "./client/src/views/master_view.js":
+/*!*****************************************!*\
+  !*** ./client/src/views/master_view.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("const MasterView = function(masterDiv) {\n  this.masterDiv = masterDiv;\n}\n\nMasterView.prototype.bindEvents = function () {\n  socket.on('game-ready', () => {\n    this.removeHide();\n  })\n};\n\nMasterView.prototype.removeHide = function () {\n  this.masterDiv.classList.remove('hide')\n};\n\nmodule.exports = MasterView;\n\n\n//# sourceURL=webpack:///./client/src/views/master_view.js?");
 
 /***/ })
 

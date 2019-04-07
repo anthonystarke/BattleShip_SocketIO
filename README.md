@@ -13,6 +13,7 @@ Install dependencies:
 npm install
 ```
 
+###Currently this is not needed but keeping in for future potential use
 Run a mongoDB server:
 
 ```
@@ -24,6 +25,8 @@ Seed the database:
 ```
 mongo < server/db/seeds.js
 ```
+###Currently this is not needed but keeping in for future potential use
+
 
 Run webpack:
 

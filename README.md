@@ -1,5 +1,5 @@
 # BattleShip Multiplayer Game - 
-# Using Socket IO, HTML, CSS, Jscript
+## Using Socket IO, HTML, CSS, Jscript
 
 ## Getting Started
 

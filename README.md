@@ -1,4 +1,5 @@
-# Clean Build - to be used for new projects in JavaScript using Mongod
+# BattleShip Multiplayer Game - 
+# Using Socket IO, HTML, CSS, Jscript
 
 ## Getting Started
 

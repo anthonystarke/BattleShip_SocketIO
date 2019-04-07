@@ -78,7 +78,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\ndocument.addEventListener('DOMContentLoaded', () => {\n\n\n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
+eval("\ndocument.addEventListener('DOMContentLoaded', () => {\n  console.log(\"Jscript loaded\");\n\n});\n\n\n//# sourceURL=webpack:///./client/src/app.js?");
 
 /***/ })
 

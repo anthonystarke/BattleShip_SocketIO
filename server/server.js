@@ -4,6 +4,9 @@ const path = require('path');
 // const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
+
 const publicPath = path.join(__dirname, '../client/public');
 app.use(express.static(publicPath));
 
@@ -16,6 +19,6 @@ app.use(express.static(publicPath));
 //   })
 //   .catch(console.err);
 
-app.listen(3000, function () {
-  console.log(`Listening on port ${ this.address().port }`);
+http.listen(3000, function () {
+  console.log(`listening on port ${this.address().port}`);
 });
